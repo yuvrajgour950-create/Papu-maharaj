@@ -1,0 +1,34 @@
+[
+  {
+    "id": "demo-gold-kurti",
+    "title": "Demo \u2022 Golden Kurti",
+    "price": 1299,
+    "currency": "INR",
+    "category": "Women",
+    "in_stock": true,
+    "images": [
+      "/uploads/demo-golden-kurti.jpg"
+    ],
+    "tags": [
+      "gold",
+      "ethnic"
+    ],
+    "description": "Demo product. Replace from Admin."
+  },
+  {
+    "id": "demo-black-tee",
+    "title": "Demo \u2022 Premium Black Tee",
+    "price": 599,
+    "currency": "INR",
+    "category": "Men",
+    "in_stock": true,
+    "images": [
+      "/uploads/demo-black-tee.jpg"
+    ],
+    "tags": [
+      "black",
+      "casual"
+    ],
+    "description": "Demo product. Replace from Admin."
+  }
+]

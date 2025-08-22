@@ -1,0 +1,69 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow
+
+site_url: "/"
+logo_url: "/assets/logo.svg"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "data/settings.json"
+        label: "Theme & Contact"
+        name: "settings"
+        fields:
+          - { label: "Brand Name", name: "brandName", widget: "string" }
+          - { label: "Primary Color", name: "primaryColor", widget: "string", default: "#000000" }
+          - { label: "Accent (Gold)", name: "accentColor", widget: "string", default: "#D4AF37" }
+          - { label: "Text on Primary", name: "textOnPrimary", widget: "string", default: "#FFFFFF" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subheadline", name: "subheadline", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string" }
+
+  - name: "catalog"
+    label: "Products"
+    label_singular: "Product"
+    identifier_field: "id"
+    delete: true
+    editor:
+      preview: false
+    files:
+      - file: "data/products.json"
+        label: "All Products"
+        name: "products"
+        fields:
+          - label: "Products"
+            name: ""
+            widget: "list"
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Price (INR)", name: "price", widget: "number", value_type: "int", min: 0 }
+              - { label: "Currency", name: "currency", widget: "string", default: "INR" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "In Stock", name: "in_stock", widget: "boolean", default: true }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+              - { label: "Tags", name: "tags", widget: "list", required: false }
+              - { label: "Description", name: "description", widget: "text" }

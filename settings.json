@@ -1,0 +1,15 @@
+{
+  "brandName": "Khushi Collection",
+  "primaryColor": "#000000",
+  "accentColor": "#D4AF37",
+  "textOnPrimary": "#FFFFFF",
+  "hero": {
+    "headline": "New Arrivals in Gold & Black",
+    "subheadline": "Elegant styles, everyday prices."
+  },
+  "contact": {
+    "phone": "+91-00000-00000",
+    "whatsapp": "+91-00000-00000",
+    "instagram": "#"
+  }
+}
